@@ -9,6 +9,7 @@ public class LoginExecuteAction extends Action {
 
         String id = request.getParameter("id");
         String password = request.getParameter("password");
+        String user = "";
 
         try {
             if (id != null && password != null) {
@@ -16,7 +17,7 @@ public class LoginExecuteAction extends Action {
                 session.setAttribute("loginUser", user);
                 request.setAttribute("id", id);
                 request.setAttribute("password", password);
-                request.getRequestDispatcher("Menu.action").forward(request, response);
+                request.getRequestDispatcher("Top.action").forward(request, response);
                 return;
             } else {
                 request.setAttribute("error", "ログインに失敗しました。IDまたはパスワードが正しくありません。");
