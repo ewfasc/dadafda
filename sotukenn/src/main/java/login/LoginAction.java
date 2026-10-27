@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
  
 @WebServlet(urlPatterns={"/login/Login"})
-public class Login extends HttpServlet {
+public class LoginAction extends HttpServlet {
  
 	public void doGet (
 			HttpServletRequest request, HttpServletResponse response
