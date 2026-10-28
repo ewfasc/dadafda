@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -47,6 +47,8 @@
     cursor: pointer;
   }
   button:hover { background: #2559c4; }
+  .agent-link { display: block; margin-top: 16px; font-size: 14px; text-align: center; color: #2f6fed; text-decoration: none; }
+  .agent-link:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -58,6 +60,7 @@
     <label for="password">パスワード</label>
     <input type="password" id="password" name="password" autocomplete="current-password">
     <button type="submit">ログイン</button>
+    <a class="agent-link" href="agentLogin.jsp">代行者ログインはこちら</a>
   </form>
 </body>
 </html>
