@@ -13,12 +13,12 @@ public class LoginExecuteAction extends Action {
 
         String id = req.getParameter("id");
         String password = req.getParameter("password");
+        Integer userno = 1;
         try {
         	UserDAO dao = new UserDAO();
             User user = dao.login(id, password);
             if (id != null && password != null) {
                 HttpSession session = req.getSession();
-                Integer userno = (Integer) session.getAttribute("userno");
                 session.setAttribute("loginUser", user);
                 req.setAttribute("id", id);
                 req.setAttribute("password", password);
