@@ -68,7 +68,7 @@
 <body>
   <form action="#" method="post">
     <a class="agent-btn" href="agentLogin.jsp">代行者ログイン</a>
-    <h1>おつかりん利用者</h1>
+    <h1>おつかりん利用者ログイン</h1>
     <p>ログイン</p>
     <label for="id">ID</label>
     <input type="text" id="id" name="id" autocomplete="username">
