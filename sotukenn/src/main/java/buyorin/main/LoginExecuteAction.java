@@ -13,6 +13,7 @@ public class LoginExecuteAction extends Action {
 
         String id = req.getParameter("id");
         String password = req.getParameter("password");
+        System.out.println(id);
         try {
         	UserDAO dao = new UserDAO();
             User user = dao.login(id, password);
