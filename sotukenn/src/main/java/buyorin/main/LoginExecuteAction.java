@@ -9,24 +9,29 @@ import tool.Action;
 
 public class LoginExecuteAction extends Action {
 //ログイン認証を行うアクション
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
 
-        String id = request.getParameter("id");
-        String password = request.getParameter("password");
+        String id = req.getParameter("id");
+        String password = req.getParameter("password");
         try {
         	UserDAO dao = new UserDAO();
             User user = dao.login(id, password);
             if (id != null && password != null) {
-                HttpSession session = request.getSession();
+                HttpSession session = req.getSession();
+                Integer userno = (Integer) session.getAttribute("userno");
                 session.setAttribute("loginUser", user);
-                request.setAttribute("id", id);
-                request.setAttribute("password", password);
-                request.getRequestDispatcher("Top.action").forward(request, response);
+                req.setAttribute("id", id);
+                req.setAttribute("password", password);
+                if (userno == 1) {
+                	req.getRequestDispatcher("Top.action").forward(req, res);
+                }else {
+                	req.getRequestDispatcher("Agenttop.action").forward(req, res);
+                }
                 return;
             } else {
-                request.setAttribute("error", "ログインに失敗しました。IDまたはパスワードが正しくありません。");
-                request.setAttribute("link", "LoginExecute.action");
-                request.getRequestDispatcher("../login.jsp").forward(request, response);
+                req.setAttribute("error", "ログインに失敗しました。IDまたはパスワードが正しくありません。");
+                req.setAttribute("link", "LoginExecute.action");
+                req.getRequestDispatcher("../login.jsp").forward(req, res);
             }
 
         } catch (Exception e) {
@@ -35,7 +40,7 @@ public class LoginExecuteAction extends Action {
 
             
            
-            request.getRequestDispatcher("error.jsp").forward(request, response);
+            req.getRequestDispatcher("error.jsp").forward(req, res);
 
         
         }
