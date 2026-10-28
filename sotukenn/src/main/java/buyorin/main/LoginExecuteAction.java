@@ -1,4 +1,4 @@
-package buyorin;
+package buyorin.main;
 
 import DAO.UserDAO;
 import bean.User;
