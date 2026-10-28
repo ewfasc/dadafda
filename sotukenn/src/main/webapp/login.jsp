@@ -47,20 +47,34 @@
     cursor: pointer;
   }
   button:hover { background: #2559c4; }
-  .agent-link { display: block; margin-top: 16px; font-size: 14px; text-align: center; color: #2f6fed; text-decoration: none; }
-  .agent-link:hover { text-decoration: underline; }
+  .agent-btn {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 42px;
+    margin-bottom: 24px;
+    border: 1px solid #2f6fed;
+    border-radius: 4px;
+    background: #fff;
+    color: #2f6fed;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .agent-btn:hover { background: #eef3ff; }
 </style>
 </head>
 <body>
   <form action="#" method="post">
-    <h1>おつかりん</h1>
+    <a class="agent-btn" href="agentLogin.jsp">代行者ログイン</a>
+    <h1>おつかりん利用者</h1>
     <p>ログイン</p>
     <label for="id">ID</label>
     <input type="text" id="id" name="id" autocomplete="username">
     <label for="password">パスワード</label>
     <input type="password" id="password" name="password" autocomplete="current-password">
     <button type="submit">ログイン</button>
-    <a class="agent-link" href="agentLogin.jsp">代行者ログインはこちら</a>
   </form>
 </body>
 </html>
