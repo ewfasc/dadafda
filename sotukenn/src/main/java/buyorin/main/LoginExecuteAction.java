@@ -22,6 +22,7 @@ public class LoginExecuteAction extends Action {
                 session.setAttribute("loginUser", user);
                 req.setAttribute("id", id);
                 req.setAttribute("password", password);
+                System.out.println(id);
                 if (id == "user") {
                 	req.getRequestDispatcher("Top.action").forward(req, res);
                 }else {
