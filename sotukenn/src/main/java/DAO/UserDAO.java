@@ -10,7 +10,7 @@ public class UserDAO extends DAO {
 	throws Exception {
 		User User = null;
 		
-		PreparedStatement st;
+		PreparedStatement st = null;
 		st.setString(1, id);
 		st.setString(2, password);
 		ResultSet rs = st.executeQuery();

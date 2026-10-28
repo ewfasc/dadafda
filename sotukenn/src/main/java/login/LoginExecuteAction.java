@@ -1,5 +1,7 @@
 package login;
 
+import DAO.UserDAO;
+import bean.User;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -11,9 +13,9 @@ public class LoginExecuteAction extends Action {
 
         String id = request.getParameter("id");
         String password = request.getParameter("password");
-        String user = "";
-
         try {
+        	UserDAO dao = new UserDAO();
+            User user = dao.login(id, password);
             if (id != null && password != null) {
                 HttpSession session = request.getSession();
                 session.setAttribute("loginUser", user);
