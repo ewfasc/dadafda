@@ -21,6 +21,7 @@ public class LoginExecuteAction extends Action {
                 HttpSession session = req.getSession();
                 session.setAttribute("loginUser", user);
                 req.setAttribute("id", id);
+                session.setAttribute("id", id);
                 req.setAttribute("password", password);
                 System.out.println(id);
                 if (id.contains("user")) {
