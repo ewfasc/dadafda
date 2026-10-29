@@ -8,7 +8,7 @@ public class LoginAction extends Action {
 	//ログイン画面にアクセスするアクション
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception{
-		req.setAttribute("link", "main/LoginExecute.action");
+		req.setAttribute("link", "LoginExecute.action");
 		req.getRequestDispatcher("user_login.jsp").forward(req, res);
 	}
 }

@@ -1,4 +1,4 @@
-package buyorin.main;
+package buyorin;
 
 import DAO.UserDAO;
 import bean.User;
@@ -23,10 +23,10 @@ public class LoginExecuteAction extends Action {
                 req.setAttribute("id", id);
                 req.setAttribute("password", password);
                 System.out.println(id);
-                if (id == "user") {
-                	req.getRequestDispatcher("Top.action").forward(req, res);
+                if (id.contains("user")) {
+                	req.getRequestDispatcher("main/Top.action").forward(req, res);
                 }else {
-                	req.getRequestDispatcher("Agenttop.action").forward(req, res);
+                	req.getRequestDispatcher("main/Agenttop.action").forward(req, res);
                 }
                 return;
             } else {
