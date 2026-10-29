@@ -55,7 +55,7 @@
     <div class="logo">買い物代行<br>お使い便</div>
   </header>
 
-  <h1>代行者新規登録完了</h1>
+   <h1>代行者新規登録完了</h1>
 
   <p class="message">登録完了しました</p>
 
