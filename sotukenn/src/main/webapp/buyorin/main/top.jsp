@@ -61,9 +61,9 @@
   <button class="login-btn" onclick="confirmLogin()">ログアウト</button>
   <h1>利用者トップ画面</h1>
   <div class="menu">
-    <a href="リンク先1">ボタン名1</a>
-    <a href="リンク先2">ボタン名2</a>
-    <a href="リンク先3">ボタン名3</a>
+    <a href="リンク先1">依頼する</a>
+    <a href="リンク先2">依頼状況を確認する</a>
+    <a href="リンク先3">履歴を確認する</a>
   </div>
 </body>
 </html>
