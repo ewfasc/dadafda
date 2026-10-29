@@ -12,7 +12,6 @@ public class ContactAction extends Action {
 		String id = req.getParameter("id");
 		HttpSession session = req.getSession();
 		req.setAttribute("link", "ContactExecute.action");
-		req.getAttribute(id);
 		req.setAttribute("id", id);
 		req.getRequestDispatcher("contact.jsp").forward(req, res);
 	}
