@@ -75,6 +75,6 @@
       <a href="戻る先">戻る</a>
       <a href="送信先">送信</a>
     </div>
-  </form>
+   </form>
 </body>
 </html>

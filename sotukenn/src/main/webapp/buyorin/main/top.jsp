@@ -56,7 +56,7 @@
     }
   }
 </script>
-</head>
+ </head>
 <body>
   <button class="login-btn" onclick="confirmLogin()">ログアウト</button>
   <h1>利用者トップ画面</h1>

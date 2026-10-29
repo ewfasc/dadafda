@@ -94,6 +94,6 @@
       <input type="text" id="bank" name="bank">
     </div>
     <a href="リンク先" class="submit">登録</a>
-  </form>
+   </form>
 </body>
 </html>

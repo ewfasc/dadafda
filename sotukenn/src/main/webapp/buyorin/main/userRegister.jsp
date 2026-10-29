@@ -99,5 +99,5 @@
     </div>
     <a href="リンク先" class="submit">登録</a>
   </form>
-</body>
+ </body>
 </html>

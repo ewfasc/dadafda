@@ -102,7 +102,7 @@
       <th>銀行口座</th>
       <td>${param.bank}</td>
     </tr>
-  </table>
+   </table>
 
   <div class="buttons">
     <a href="戻る先" class="back">戻る</a>
