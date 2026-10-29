@@ -67,7 +67,7 @@
 </head>
 <body>
   <form action="#" method="post">
-    <a class="agent-btn" href="User_login.jsp">利用者ログイン</a>
+    <a class="agent-btn" href="userLogin.jsp">利用者ログイン</a>
     <h1>おつかりん代行者ログイン</h1>
     <p>ログイン</p>
     <label for="id">ID</label>

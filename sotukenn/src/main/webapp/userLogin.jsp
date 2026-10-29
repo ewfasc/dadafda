@@ -66,15 +66,14 @@
 </style>
 </head>
 <body>
-  <form action="#" method="post">
+  <form action="LoginServlet" method="post">
     <a class="agent-btn" href="agentLogin.jsp">代行者ログイン</a>
     <h1>おつかりん利用者ログイン</h1>
     <p>ログイン</p>
+    <input type="hidden" name="type" value="0">
     <label for="id">ID</label>
     <input type="text" id="id" name="id" autocomplete="username">
     <label for="password">パスワード</label>
     <input type="password" id="password" name="password" autocomplete="current-password">
     <button type="submit">ログイン</button>
-  </form>
-</body>
-</html>
+</form>
