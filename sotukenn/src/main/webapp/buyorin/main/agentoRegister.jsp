@@ -82,7 +82,7 @@
       <input type="tel" id="tel" name="tel">
     </div>
     <div class="field">
-      <label for="email">メールアドレス</label>
+      <label for="email">ID</label>
       <input type="email" id="email" name="email">
     </div>
     <div class="field">
