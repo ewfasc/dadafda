@@ -64,7 +64,7 @@
   </p>
 
   <div class="buttons">
-    <a href="戻る先">トップへ戻る</a>
+    <a href="$[link ]">トップへ戻る</a>
   </div>
 </body>
 </html>

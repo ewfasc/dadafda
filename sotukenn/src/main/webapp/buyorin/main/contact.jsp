@@ -70,10 +70,10 @@
   <h1>お問い合わせ</h1>
 
   <form>
-    <textarea name="inquiry"></textarea>
+    <textarea name="content"></textarea>
     <div class="buttons">
       <a href="戻る先">戻る</a>
-      <a href="送信先">送信</a>
+      <a href="$[link ]">送信</a>
     </div>
    </form>
 </body>
