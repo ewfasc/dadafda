@@ -75,23 +75,23 @@
   <form>
     <div class="field">
       <label for="name">名前</label>
-      <input type="text" id="name" name="name">
+      <input type="text" id="name" name="name" required>
     </div>
     <div class="field">
       <label for="tel">電話番号</label>
-      <input type="tel" id="tel" name="tel">
+      <input type="tel" id="tel" name="tel" required>
     </div>
     <div class="field">
       <label for="email">ID</label>
-      <input type="email" id="email" name="email">
+      <input type="email" id="email" name="email" required>
     </div>
     <div class="field">
       <label for="password">パスワード</label>
-      <input type="password" id="password" name="password">
+      <input type="password" id="password" name="password" required>
     </div>
     <div class="field">
       <label for="bank">銀行口座</label>
-      <input type="text" id="bank" name="bank">
+      <input type="text" id="bank" name="bank" required>
     </div>
     <a href="リンク先" class="submit">登録</a>
    </form>
