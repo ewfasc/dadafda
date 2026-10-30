@@ -93,7 +93,7 @@
       <label for="bank">銀行口座</label>
       <input type="text" id="bank" name="bank" required>
     </div>
-    <a href="リンク先" class="submit">登録</a>
+    <a href="AgentRegisterConfirmation.action" class="submit">登録</a>
    </form>
 </body>
 </html>
