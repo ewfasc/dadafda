@@ -82,7 +82,7 @@
       <input type="tel" id="tel" name="tel" required>
     </div>
     <div class="field">
-      <label for="email">ID</label>
+      <label for="email">メールアドレス</label>
       <input type="email" id="email" name="email" required>
     </div>
     <div class="field">

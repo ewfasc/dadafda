@@ -72,17 +72,17 @@
 
   <h1>代行者新規登録</h1>
 
-  <form>
+  <form action="AgentConfirmation.action" method="post">
     <div class="field">
       <label for="name">名前</label>
       <input type="text" id="name" name="name" required>
     </div>
     <div class="field">
-      <label for="tel">電話番号</label>
-      <input type="tel" id="tel" name="tel" required>
+      <label for="tell">電話番号</label>
+      <input type="tell" id="tell" name="tell" required>
     </div>
     <div class="field">
-      <label for="email">ID</label>
+      <label for="email">メールアドレス</label>
       <input type="email" id="email" name="email" required>
     </div>
     <div class="field">
@@ -93,7 +93,7 @@
       <label for="bank">銀行口座</label>
       <input type="text" id="bank" name="bank" required>
     </div>
-    <a href="AgentRegisterConfirmation.action" class="submit">登録</a>
+    <input type="submit" class="submit" value="登録">
    </form>
 </body>
 </html>

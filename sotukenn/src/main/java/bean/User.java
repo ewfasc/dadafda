@@ -44,7 +44,7 @@ public class User implements java.io.Serializable {
 		this.mail = mail;
 	}
 	
-	public void settell(String tell) {
+	public void setTell(String tell) {
 		this.tell = tell;
 	}
 }
