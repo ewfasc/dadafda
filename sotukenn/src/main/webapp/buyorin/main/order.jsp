@@ -90,7 +90,7 @@
     var ok = true;
 
     var memo = document.getElementById("memo").value.trim();
-    var budget = document.getElementById("budget").value.trim();
+    var money = document.getElementById("money").value.trim();
 
     if (memo === "") {
       document.getElementById("memoError").textContent = "メモを書いてください";
@@ -99,21 +99,21 @@
       document.getElementById("memoError").textContent = "";
     }
 
-    if (budget === "") {
-      document.getElementById("budgetError").textContent = "予算金額を書いてください";
+    if (money === "") {
+      document.getElementById("moneytError").textContent = "予算金額を書いてください";
       ok = false;
-    } else if (!/^[0-9]+$/.test(budget)) {
-      document.getElementById("budgetError").textContent = "整数で入力してください";
+    } else if (!/^[0-9]+$/.test(money)) {
+      document.getElementById("moneyError").textContent = "整数で入力してください";
       ok = false;
     } else {
-      document.getElementById("budgetError").textContent = "";
+      document.getElementById("moneyError").textContent = "";
     }
 
     return ok;
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("budget").addEventListener("input", function () {
+    document.getElementById("money").addEventListener("input", function () {
       this.value = this.value.replace(/[^0-9]/g, "");
     });
   });

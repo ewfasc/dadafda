@@ -33,7 +33,7 @@ public class LoginExecuteAction extends Action {
             } else {
                 req.setAttribute("error", "ログインに失敗しました。IDまたはパスワードが正しくありません。");
                 req.setAttribute("link", "LoginExecute.action");
-                req.getRequestDispatcher("../login.jsp").forward(req, res);
+                req.getRequestDispatcher("login.jsp").forward(req, res);
             }
 
         } catch (Exception e) {
