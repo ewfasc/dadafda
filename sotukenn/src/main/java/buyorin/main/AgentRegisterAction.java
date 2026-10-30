@@ -8,7 +8,7 @@ public class AgentRegisterAction extends Action {
 	//利用者メインメニュー画面を表示するするアクション
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception{
 		req.setAttribute("link", "AgentRegister.action");
-		req.getRequestDispatcher("agentorRegister.jsp").forward(req, res);
+		req.getRequestDispatcher("agentRegister.jsp").forward(req, res);
 	}
 }
 
