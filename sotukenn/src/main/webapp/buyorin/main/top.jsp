@@ -52,7 +52,7 @@
 <script>
   function confirmLogin() {
     if (confirm("本当にログアウトしますか？")) {
-      location.href = "ログアウト先";
+      location.href = "main.Logout.action";
     }
   }
 </script>
@@ -61,7 +61,7 @@
   <button class="login-btn" onclick="confirmLogin()">ログアウト</button>
   <h1>利用者トップ画面</h1>
   <div class="menu">
-    <a href="リンク先1">依頼する</a>
+    <a href="Order.action">依頼する</a>
     <a href="リンク先2">依頼状況を確認する</a>
     <a href="リンク先3">履歴を確認する</a>
   </div>

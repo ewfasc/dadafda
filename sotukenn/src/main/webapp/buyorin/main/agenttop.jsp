@@ -52,7 +52,7 @@
 <script>
   function confirmLogin() {
     if (confirm("本当にログアウトしますか？")) {
-      location.href = "ログアウト先";
+      location.href = "Logout.action";
     }
   }
 </script>

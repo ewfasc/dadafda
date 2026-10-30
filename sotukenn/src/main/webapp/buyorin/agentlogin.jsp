@@ -66,7 +66,7 @@
 </style>
 </head>
 <body>
-  <form action="${link }" method="post">
+  <form action="LoginExecute.action" method="post">
     <a class="agent-btn" href="user_login.jsp">利用者ログイン</a>
     <h1>おつかりん代行者ログイン</h1>
     <p>ログイン</p>
