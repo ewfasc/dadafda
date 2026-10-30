@@ -94,10 +94,10 @@
       <input type="text" id="address" name="address" required>
     </div>
     <div class="field">
-      <label for="bank">銀行口座</label>
-      <input type="text" id="bank" name="bank" required>
+      <label for="bank">支払方法</label>
+      <input type="text" id="pay" name="pay" required>
     </div>
-    <a href="リンク先" class="submit">登録</a>
+    <a href="UserRegisterConfirmation.action" class="submit">登録</a>
   </form>
  </body>
 </html>
