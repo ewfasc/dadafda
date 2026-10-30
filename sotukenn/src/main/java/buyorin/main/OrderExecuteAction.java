@@ -16,12 +16,8 @@ public class OrderExecuteAction extends Action {
 		try {
         	ContactDAO dao = new ContactDAO();
             dao.contact(id, content);
-            if (id.contains("user")) {
-            	req.getRequestDispatcher("Top.action").forward(req, res);
-            }else {
-            	req.getRequestDispatcher("Agenttop.action").forward(req, res);
-            }    		
-    		req.getRequestDispatcher("ContactComplete.action").forward(req, res);
+            req.setAttribute("link", "Status.action");
+    		req.getRequestDispatcher("OrderComplete.action").forward(req, res);
         } catch (Exception e) {
           
             e.printStackTrace();
