@@ -1,0 +1,38 @@
+package buyorin.main;
+
+import DAO.ContactDAO;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import tool.Action;
+
+public class AgentOrderExecuteAction extends Action {
+	//アクション
+	@Override
+	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception{
+		HttpSession session = req.getSession();
+		String id = (String) session.getAttribute("id");
+		String content = req.getParameter("content");
+		try {
+        	ContactDAO dao = new ContactDAO();
+            dao.contact(id, content);
+            if (id.contains("user")) {
+            	req.getRequestDispatcher("Top.action").forward(req, res);
+            }else {
+            	req.getRequestDispatcher("Agenttop.action").forward(req, res);
+            }    		
+    		req.getRequestDispatcher("ContactComplete.action").forward(req, res);
+        } catch (Exception e) {
+          
+            e.printStackTrace();
+
+           
+            req.getRequestDispatcher("error.jsp").forward(req, res);
+
+        
+        }
+		
+	}
+}
+
+
