@@ -1,6 +1,6 @@
 package buyorin.main;
 
-import DAO.ContactDAO;
+import DAO.OrderDAO;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -12,10 +12,11 @@ public class OrderExecuteAction extends Action {
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception{
 		HttpSession session = req.getSession();
 		String id = (String) session.getAttribute("id");
-		String content = req.getParameter("content");
+		String memo = (String) session.getAttribute("memo");
+		Integer money = (Integer) session.getAttribute("momey");
 		try {
-        	ContactDAO dao = new ContactDAO();
-            dao.contact(id, content);
+        	OrderDAO dao = new OrderDAO();
+            dao.order(id, memo, money);
             req.setAttribute("link", "Status.action");
     		req.getRequestDispatcher("OrderComplete.action").forward(req, res);
         } catch (Exception e) {

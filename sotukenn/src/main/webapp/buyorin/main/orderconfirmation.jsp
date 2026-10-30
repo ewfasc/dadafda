@@ -80,7 +80,7 @@
 
     <div class="buttons">
       <a href="戻る先">戻る</a>
-      <a href="注文先">注文</a>
+      <a href="$[link]">注文</a>
     </div>
   </div>
 </body>

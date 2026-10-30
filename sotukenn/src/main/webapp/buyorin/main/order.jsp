@@ -122,7 +122,7 @@
 <body>
   <h1>注文メモ</h1>
 
-  <form action="送信先" method="post" onsubmit="return validateForm()">
+  <form action="$[link ]" method="post" onsubmit="return validateForm()">
     <div class="field">
       <label for="memo">メモ</label>
       <textarea id="memo" name="memo"></textarea>
@@ -131,7 +131,7 @@
 
     <div class="field yen">
       <label for="budget">予算金額</label>
-      <input type="text" id="budget" name="budget" inputmode="numeric" maxlength="9" autocomplete="off">
+      <input type="text" id="moneyt" name="money" inputmode="numeric" maxlength="9" autocomplete="off">
       <span class="unit">円</span>
     </div>
     <div class="error" id="budgetError"></div>
