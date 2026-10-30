@@ -4,7 +4,7 @@ public class Menber implements java.io.Serializable {
 	
 	private String id;
 	private String pay;
-	private String adress;
+	private String address;
 	
 	public String getId() {
 		return id;
@@ -14,8 +14,8 @@ public class Menber implements java.io.Serializable {
 		return pay;
 	}
 	
-	public String getAdress() {
-		return adress;
+	public String getAddress() {
+		return address;
 	}
 	
 	public void setId(String id) {
@@ -26,7 +26,7 @@ public class Menber implements java.io.Serializable {
 		this.pay = pay;
 	}
 	
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 }
