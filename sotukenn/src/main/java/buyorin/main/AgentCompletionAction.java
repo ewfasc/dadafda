@@ -8,7 +8,7 @@ public class AgentCompletionAction extends Action {
 	//利用者メインメニュー画面を表示するするアクション
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception{
 		req.setAttribute("link", "AgentCompletion.action");
-		req.getRequestDispatcher("AgentCompletion.jsp").forward(req, res);
+		req.getRequestDispatcher("agentCompletion.jsp").forward(req, res);
 	}
 }
 

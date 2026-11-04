@@ -16,7 +16,7 @@ public class UserRegisterExecuteAction extends Action {
 		Menber menber = (Menber)session.getAttribute("menber");
 		
 		session.removeAttribute("user");
-		session.removeAttribute("member");
+		session.removeAttribute("menber");
 		
 		res.sendRedirect("UserCompletion.action");
 	}
