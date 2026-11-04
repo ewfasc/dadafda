@@ -61,10 +61,9 @@
     <button class="login-btn" onclick="confirmLogin()">ログアウト</button>
     <h1>利用者トップ画面</h1>
     <div class="menu">
-        <%-- request.getContextPath() を使うことで、どのURLから開いても正しく /sotukenn/buyorin/main/... に繋がります --%>
-        <a href="<%= request.getContextPath() %>/buyorin/main/Order.action">依頼する</a>
-        <a href="<%= request.getContextPath() %>/buyorin/main/Status.action">依頼状況を確認する</a>
-        <a href="<%= request.getContextPath() %>/buyorin/main/History.action">履歴を確認する</a>
+        <a href="Order.action">依頼する</a>
+        <a href="Status.action">依頼状況を確認する</a>
+        <a href="History.action">履歴を確認する</a>
     </div>
 </body>
 </html>
