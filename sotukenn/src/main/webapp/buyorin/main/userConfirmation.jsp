@@ -108,9 +108,9 @@
     </tr>
    </table>
 
-  <div class="buttons">
-    <a href="戻る先" class="back">戻る</a>
-    <a href="完了先" class="done">完了</a>
-  </div>
+  <form action="UserRegisterExecute.action" method="post">
+  	<input type="submit" formaction="UserRegister.action" value="戻る">
+  	<input type="submit" value="完了">
+  </form>
 </body>
 </html>
