@@ -53,6 +53,26 @@
     color: #fff;
     font-weight: bold;
   }
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+.steps .arrow {
+  color: #000;
+}
+.steps .step {
+  padding: 6px 14px;
+  border: 2px solid transparent; 
+  display: inline-block;
+}
+.steps .step.active {
+  border: 2px solid #000;       
+  border-radius: 20px;          
+  background-color: transparent; 
+  font-weight: bold;            
+}
   .arrow {
     font-size: 28px;
   }
@@ -92,20 +112,17 @@
 <body>
   <h1>依頼状況確認</h1>
 
-  <div class="order-id">注文ID：${param.orderId}</div>
+  <div class="order-id">注文ID：111111${param.orderId}</div>
 
-  <form action="送信先" method="post">
-    <input type="hidden" name="orderId" value="${param.orderId}">
-    <div class="steps">
-      <button type="submit" name="status" value="受注済み" class="<%= "受注済み".equals(status) ? "active" : "" %>">受注済み</button>
-      <span class="arrow">▶</span>
-      <button type="submit" name="status" value="買物中" class="<%= "買物中".equals(status) ? "active" : "" %>">買物中</button>
-      <span class="arrow">▶</span>
-      <button type="submit" name="status" value="配達中" class="<%= "配達中".equals(status) ? "active" : "" %>">配達中</button>
-      <span class="arrow">▶</span>
-      <button type="submit" name="status" value="完了" class="<%= "完了".equals(status) ? "active" : "" %>">完了</button>
-    </div>
-  </form>
+ <div class="steps">
+  <span class="step <%= "受注済み".equals(status) ? "active" : "" %>">受注済み</span>
+  <span class="arrow">▶</span>
+  <span class="step <%= "買物中".equals(status) ? "active" : "" %>">買物中</span>
+  <span class="arrow">▶</span>
+  <span class="step <%= "配達中".equals(status) ? "active" : "" %>">配達中</span>
+  <span class="arrow">▶</span>
+  <span class="step <%= "完了".equals(status) ? "active" : "" %>">完了</span>
+</div>
 
   <div class="content">
     <div class="label">依頼内容</div>
