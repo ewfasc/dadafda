@@ -52,11 +52,11 @@
 <script>
   function confirmLogin() {
     if (confirm("本当にログアウトしますか？")) {
-      location.href = "main.Logout.action";
+      location.href = "<%= request.getContextPath() %>/buyorin/main.Logout.action";
     }
   }
- </head>
-  </script>
+</script>
+</head>
 <body>
     <button class="login-btn" onclick="confirmLogin()">ログアウト</button>
     <h1>利用者トップ画面</h1>
