@@ -17,7 +17,6 @@ public class OrderExecuteAction extends Action {
 		try {
         	OrderDAO dao = new OrderDAO();
             dao.order(id, memo, money);
-            req.setAttribute("link", "Status.action");
     		req.getRequestDispatcher("OrderComplete.action").forward(req, res);
         } catch (Exception e) {
           

@@ -43,13 +43,13 @@
     height: 220px;
     resize: none;
   }
-  .field.yen {
+  .field.money {
     position: relative;
   }
-  .field.yen input {
+  .field.money input {
     padding-right: 30px;
   }
-  .field.yen .unit {
+  .field.money .unit {
     position: absolute;
     right: 12px;
     bottom: 10px;
@@ -122,22 +122,22 @@
 <body>
   <h1>注文メモ</h1>
 
-  <form action="$[link ]" method="post" onsubmit="return validateForm()">
+  <form action="OrderDetil.action" method="post" onsubmit="return validateForm()">
     <div class="field">
       <label for="memo">メモ</label>
       <textarea id="memo" name="memo"></textarea>
     </div>
     <div class="error" id="memoError"></div>
 
-    <div class="field yen">
-      <label for="budget">予算金額</label>
-      <input type="text" id="moneyt" name="money" inputmode="numeric" maxlength="9" autocomplete="off">
+    <div class="field money">
+      <label for="money">予算金額</label>
+      <input type="text" id="money" name="money" inputmode="numeric" maxlength="9" autocomplete="off">
       <span class="unit">円</span>
     </div>
-    <div class="error" id="budgetError"></div>
+    <div class="error" id="moneyError"></div>
 
     <div class="buttons">
-      <a href="戻る先">戻る</a>
+      <a href="javascript:history.back();">戻る</a>
       <button type="submit">決定</button>
     </div>
   </form>

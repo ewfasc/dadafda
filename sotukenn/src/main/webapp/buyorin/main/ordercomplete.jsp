@@ -48,7 +48,7 @@
   <p class="message">注文が完了しました</p>
 
   <div class="buttons">
-    <a href="$[link]">次へ</a>
+    <a href="Status.action">次へ</a>
   </div>
 </body>
 </html>

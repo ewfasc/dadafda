@@ -112,6 +112,6 @@
     ${param.content}
   </div>
 
-  <a href="$[link ]" class="back">メニューに戻る</a>
+  <a href="Top.action" class="back">メニューに戻る</a>
 </body>
 </html>

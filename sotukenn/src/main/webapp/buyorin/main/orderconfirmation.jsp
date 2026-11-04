@@ -70,17 +70,17 @@
   <div class="confirm">
     <div class="field memo">
       <div class="label">メモ</div>
-      <div class="value"><c:out value="${param.memo}" /></div>
+      <div class="value">${memo }</div>
     </div>
 
-    <div class="field budget">
+    <div class="field money">
       <div class="label">予算金額</div>
-      <div class="value"><c:out value="${param.budget}" />円</div>
+      <div class="value">${money }円</div>
     </div>
 
     <div class="buttons">
-      <a href="戻る先">戻る</a>
-      <a href="$[link]">注文</a>
+      <a href="javascript:history.back();">戻る</a>
+      <a href="OrderComplete.action">注文</a>
     </div>
   </div>
 </body>

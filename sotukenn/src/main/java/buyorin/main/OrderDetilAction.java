@@ -12,8 +12,9 @@ public class OrderDetilAction extends Action {
 		String memo = req.getParameter("memo");
 		String money = req.getParameter("money");
 		session.setAttribute(memo, memo);
-		session.setAttribute(money,money );		
-		req.setAttribute("link", "OrderExecute.action");
+		session.setAttribute(money,money);		
+		req.setAttribute("memo", memo);
+		req.setAttribute("money", money);
 		req.getRequestDispatcher("orderconfirmation.jsp").forward(req, res);
 	}
 }
