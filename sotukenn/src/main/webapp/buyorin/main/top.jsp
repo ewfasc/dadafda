@@ -127,7 +127,6 @@
   }
   function confirmLogout() {
     if (confirm("本当にログアウトしますか？")) {
-      // ★リンク先記入：ログアウトのAction（例：/buyorin/main/Logout.action）
       location.href = "Logout.action";
     }
   }

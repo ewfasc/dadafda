@@ -16,12 +16,7 @@ public class ContactExecuteAction extends Action {
 		try {
         	ContactDAO dao = new ContactDAO();
             dao.contact(id, content);
-            if (id.contains("user")) {
-            	req.getRequestDispatcher("Top.action").forward(req, res);
-            }else {
-            	req.getRequestDispatcher("Agenttop.action").forward(req, res);
-            }    		
-    		req.getRequestDispatcher("ContactComplete.action").forward(req, res);
+            res.sendRedirect("ContactComplete.action");
         } catch (Exception e) {
           
             e.printStackTrace();
