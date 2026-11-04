@@ -1,13 +1,14 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <% request.setCharacterEncoding("UTF-8"); %>
 <%
-  String status = request.getParameter("status");
+  String status = (String) request.getAttribute("status");
   if (status == null) {
-    status = (String) request.getAttribute("status");
+    status = request.getParameter("status");
   }
   if (status == null) {
     status = "受注済み";
   }
+  String[] list = {"受注済み", "買物中", "配達中", "完了"};
 %>
 <!DOCTYPE html>
 <html lang="ja">
@@ -42,11 +43,9 @@
     border-radius: 50%;
     border: 1px solid #000;
     background-color: #fff;
+    color: #000;
     font-size: 16px;
-    cursor: pointer;
-  }
-  .steps button:hover {
-    background-color: #eee;
+    cursor: default;
   }
   .steps button.active {
     background-color: #2e7d32;
@@ -94,18 +93,12 @@
 
   <div class="order-id">注文ID：${param.orderId}</div>
 
-  <form action="送信先" method="post">
-    <input type="hidden" name="orderId" value="${param.orderId}">
-    <div class="steps">
-      <button type="submit" name="status" value="受注済み" class="<%= "受注済み".equals(status) ? "active" : "" %>">受注済み</button>
-      <span class="arrow">▶</span>
-      <button type="submit" name="status" value="買物中" class="<%= "買物中".equals(status) ? "active" : "" %>">買物中</button>
-      <span class="arrow">▶</span>
-      <button type="submit" name="status" value="配達中" class="<%= "配達中".equals(status) ? "active" : "" %>">配達中</button>
-      <span class="arrow">▶</span>
-      <button type="submit" name="status" value="完了" class="<%= "完了".equals(status) ? "active" : "" %>">完了</button>
-    </div>
-  </form>
+  <div class="steps">
+    <% for (int i = 0; i < list.length; i++) { %>
+      <% if (i > 0) { %><span class="arrow">▶</span><% } %>
+      <button type="button" disabled class="<%= list[i].equals(status) ? "active" : "" %>"><%= list[i] %></button>
+    <% } %>
+  </div>
 
   <div class="content">
     <div class="label">依頼内容</div>
