@@ -1,4 +1,5 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -64,7 +65,7 @@
   </p>
 
   <div class="buttons">
-    <a href="$[link ]">トップへ戻る</a>
+    <a href="${link}">トップへ戻る</a>
   </div>
 </body>
 </html>

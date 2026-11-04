@@ -61,7 +61,7 @@
   <button class="login-btn" onclick="confirmLogin()">ログアウト</button>
   <h1>代行トップ画面</h1>
   <div class="menu">
-    <a href="リンク先1">依頼一覧</a>
+    <a href="AgentOrder.action">依頼一覧</a>
     <a href="リンク先2">受注情報</a>
     <a href="リンク先3">履歴確認</a>
    </div>

@@ -92,33 +92,33 @@
 
   <div class="list">
     <details>
-      <summary>注文ID：</summary>
+      <summary>注文ID：1</summary>
       <div class="detail">
         <div class="content"></div>
-        <form action="送信先" method="post">
-          <input type="hidden" name="orderId" value="">
+        <form action="" method="post">
+          <input type="hidden" name="orderid" value="1">
           <button type="submit" class="accept">依頼を受ける</button>
         </form>
       </div>
     </details>
 
     <details>
-      <summary>注文ID：</summary>
+      <summary>注文ID：2</summary>
       <div class="detail">
         <div class="content"></div>
         <form action="送信先" method="post">
-          <input type="hidden" name="orderId" value="">
+          <input type="hidden" name="orderid" value="2">
           <button type="submit" class="accept">依頼を受ける</button>
         </form>
       </div>
     </details>
 
     <details>
-      <summary>注文ID：</summary>
+      <summary>注文ID：3</summary>
       <div class="detail">
         <div class="content"></div>
         <form action="送信先" method="post">
-          <input type="hidden" name="orderId" value="">
+          <input type="hidden" name="orderid" value="3">
           <button type="submit" class="accept">依頼を受ける</button>
         </form>
       </div>
@@ -126,7 +126,7 @@
   </div>
 
   <div class="buttons">
-    <a href="戻る先">戻る</a>
+    <a href="javascript:history.back();">戻る</a>
   </div>
 </body>
 </html>

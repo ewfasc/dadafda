@@ -111,26 +111,14 @@
 <body>
   <h1>依頼状況確認</h1>
 
-  <div class="order-id">注文ID：111111${param.orderId}</div>
+  <div class="order-id">注文ID：111111</div>
 
-<<<<<<< HEAD
- <div class="steps">
-  <span class="step <%= "受注済み".equals(status) ? "active" : "" %>">受注済み</span>
-  <span class="arrow">▶</span>
-  <span class="step <%= "買物中".equals(status) ? "active" : "" %>">買物中</span>
-  <span class="arrow">▶</span>
-  <span class="step <%= "配達中".equals(status) ? "active" : "" %>">配達中</span>
-  <span class="arrow">▶</span>
-  <span class="step <%= "完了".equals(status) ? "active" : "" %>">完了</span>
-</div>
-=======
   <div class="steps">
     <% for (int i = 0; i < list.length; i++) { %>
       <% if (i > 0) { %><span class="arrow">▶</span><% } %>
       <button type="button" disabled class="<%= list[i].equals(status) ? "active" : "" %>"><%= list[i] %></button>
     <% } %>
   </div>
->>>>>>> branch 'master' of https://github.com/ewfasc/dadafda.git
 
   <div class="content">
     <div class="label">依頼内容</div>

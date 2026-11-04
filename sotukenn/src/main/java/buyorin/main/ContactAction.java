@@ -8,7 +8,6 @@ public class ContactAction extends Action {
 	//お問い合わせ画面にアクセスするアクション
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception{
-		req.setAttribute("link", "ContactExecute.action");
 		req.getRequestDispatcher("contact.jsp").forward(req, res);
 	}
 }

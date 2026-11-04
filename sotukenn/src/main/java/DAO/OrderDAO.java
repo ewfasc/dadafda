@@ -11,4 +11,12 @@ public class OrderDAO extends DAO {
 		Order.setMemo(memo);
 		Order.setMoney(money);
 	}
+	
+	public void get(String id)
+			throws Exception {
+				Order Order = null;
+				Order = new Order();
+				Order.setId(id);
+			}
+	
 }
