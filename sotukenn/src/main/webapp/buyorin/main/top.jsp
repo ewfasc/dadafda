@@ -55,15 +55,16 @@
       location.href = "main.Logout.action";
     }
   }
-</script>
  </head>
+  </script>
 <body>
-  <button class="login-btn" onclick="confirmLogin()">ログアウト</button>
-  <h1>利用者トップ画面</h1>
-  <div class="menu">
-    <a href="main/Order.action">依頼する</a>
-    <a href="main/Status.action">依頼状況を確認する</a>
-    <a href="リンク先3">履歴を確認する</a>
-  </div>
+    <button class="login-btn" onclick="confirmLogin()">ログアウト</button>
+    <h1>利用者トップ画面</h1>
+    <div class="menu">
+        <%-- request.getContextPath() を使うことで、どのURLから開いても正しく /sotukenn/buyorin/main/... に繋がります --%>
+        <a href="<%= request.getContextPath() %>/buyorin/main/Order.action">依頼する</a>
+        <a href="<%= request.getContextPath() %>/buyorin/main/Status.action">依頼状況を確認する</a>
+        <a href="<%= request.getContextPath() %>/buyorin/main/History.action">履歴を確認する</a>
+    </div>
 </body>
 </html>

@@ -8,7 +8,7 @@ public class HistoryAction extends Action {
 	//利用履歴を表示するするアクション
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception{
 		req.setAttribute("link", "Top.action");
-		req.getRequestDispatcher("History.jsp").forward(req, res);
+		req.getRequestDispatcher("history.jsp").forward(req, res);
 	}
 }
 

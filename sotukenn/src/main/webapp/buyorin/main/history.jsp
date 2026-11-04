@@ -88,7 +88,7 @@
   </div>
 
   <div class="buttons">
-    <a href="メインメニュー先">メインメニューに戻る</a>
+    <a href="javascript:history.back();">メインメニューに戻る</a>
   </div>
 </body>
 </html>
