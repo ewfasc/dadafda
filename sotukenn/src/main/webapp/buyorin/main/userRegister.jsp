@@ -72,14 +72,14 @@
 
   <h1>利用者新規登録</h1>
 
-  <form>
+  <form action="UserConfirmation.action" method="post">
     <div class="field">
       <label for="name">名前</label>
       <input type="text" id="name" name="name" required>
     </div>
     <div class="field">
       <label for="tel">電話番号</label>
-      <input type="tel" id="tel" name="tel" required>
+      <input type="tel" id="tell" name="tell" required>
     </div>
     <div class="field">
       <label for="email">メールアドレス</label>
@@ -97,7 +97,7 @@
       <label for="bank">支払方法</label>
       <input type="text" id="pay" name="pay" required>
     </div>
-    <a href="UserRegisterConfirmation.action" class="submit">登録</a>
+    <input type="submit" class="submit" value="登録">
   </form>
  </body>
 </html>

@@ -84,27 +84,27 @@
   <table>
     <tr>
       <th>名前</th>
-      <td>${param.name}</td>
+      <td>${sessionScope.user.username}</td>
     </tr>
     <tr>
       <th>電話番号</th>
-      <td>${param.tel}</td>
+      <td>${sessionScope.user.tell}</td>
     </tr>
     <tr>
       <th>メールアドレス</th>
-      <td>${param.email}</td>
+      <td>${sessionScope.user.mail}</td>
     </tr>
     <tr>
       <th>パスワード</th>
-      <td>${param.password }</td>
+      <td>${sessionScope.user.password }</td>
     </tr>
        <tr>
       <th>住所</th>
-      <td>${param.address}</td>
+      <td>${sessionScope.menber.address}</td>
     </tr>
     <tr>
-      <th>銀行口座</th>
-      <td>${param.bank}</td>
+      <th>支払方法</th>
+      <td>${sessionScope.menber.pay}</td>
     </tr>
    </table>
 
