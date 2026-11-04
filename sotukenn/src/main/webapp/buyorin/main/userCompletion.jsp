@@ -16,7 +16,7 @@
     display: inline-block;
     text-align: center;
     font-size: 18px;
-    line-height: 1.3;
+    line-height: 1.
   }
   h1 {
     text-align: center;

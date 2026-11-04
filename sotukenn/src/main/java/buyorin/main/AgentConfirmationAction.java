@@ -11,17 +11,11 @@ public class AgentConfirmationAction extends Action {
 	//利用者メインメニュー画面を表示するするアクション
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception{
 		
-		String name = "";
-		String password = "";
-		String tell = "";
-		String mail = "";
-		String bank = "";
-		
-		name = req.getParameter("name");
-		password = req.getParameter("password");
-		tell = req.getParameter("tell");
-		mail = req.getParameter("email");
-		bank = req.getParameter("bank");
+		String name = req.getParameter("name");
+		String password = req.getParameter("password");
+		String tell = req.getParameter("tell");
+		String mail = req.getParameter("email");
+		String bank = req.getParameter("bank");
 		
 		String id = "1234";
 		

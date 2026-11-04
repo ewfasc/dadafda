@@ -108,9 +108,25 @@
     </tr>
    </table>
 
-  <form action="UserRegisterExecute.action" method="post">
-  	<input type="submit" formaction="UserRegister.action" value="戻る">
-  	<input type="submit" value="完了">
+ <div class="buttons">
+ <a href="UserRegister.action" class="back">戻る</a>
+ <form action="UserRegisterExecute.action" method="post">
+  	<input type="submit" value="完了" class="done">
   </form>
+ </div>
+  
 </body>
+<script>
+window.addEventListener("pageshow", function(event) {
+
+    const navigation =
+        performance.getEntriesByType("navigation")[0];
+
+    if (event.persisted ||
+        (navigation && navigation.type === "back_forward")) {
+
+        window.location.reload();
+    }
+});
+</script>
 </html>
