@@ -127,13 +127,18 @@
   }
   function confirmLogout() {
     if (confirm("本当にログアウトしますか？")) {
+<<<<<<< HEAD
+     
+      location.href = "<%= request.getContextPath() %>/buyorin/main/Logout.action";
+=======
       location.href = "Logout.action";
+>>>>>>> branch 'master' of https://github.com/ewfasc/dadafda.git
     }
   }
 </script>
 </head>
 <body>
-    <!-- 三本線ボタン -->
+   
     <button class="menu-btn" onclick="toggleSidebar()" aria-label="メニューを開く">
         <span></span>
         <span></span>
