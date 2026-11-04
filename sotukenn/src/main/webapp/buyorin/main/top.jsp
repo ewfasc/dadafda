@@ -160,12 +160,6 @@
         <a href="Order.action">依頼する</a>
         <a href="Status.action">依頼状況を確認する</a>
         <a href="History.action">履歴を確認する</a>
-
-        <a href="Order.action">依頼する</a>
-       
-        <a href="Status.action">依頼状況を確認する</a>
-     
-        <a href="History.action">履歴を確認する</a>
     </div>
 </body>
 </html>
