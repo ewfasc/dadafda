@@ -1,13 +1,14 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <% request.setCharacterEncoding("UTF-8"); %>
 <%
-  String status = request.getParameter("status");
+  String status = (String) request.getAttribute("status");
   if (status == null) {
-    status = (String) request.getAttribute("status");
+    status = request.getParameter("status");
   }
   if (status == null) {
     status = "受注済み";
   }
+  String[] list = {"受注済み", "買物中", "配達中", "完了"};
 %>
 <!DOCTYPE html>
 <html lang="ja">
@@ -42,11 +43,9 @@
     border-radius: 50%;
     border: 1px solid #000;
     background-color: #fff;
+    color: #000;
     font-size: 16px;
-    cursor: pointer;
-  }
-  .steps button:hover {
-    background-color: #eee;
+    cursor: default;
   }
   .steps button.active {
     background-color: #2e7d32;
@@ -114,6 +113,7 @@
 
   <div class="order-id">注文ID：111111${param.orderId}</div>
 
+<<<<<<< HEAD
  <div class="steps">
   <span class="step <%= "受注済み".equals(status) ? "active" : "" %>">受注済み</span>
   <span class="arrow">▶</span>
@@ -123,6 +123,14 @@
   <span class="arrow">▶</span>
   <span class="step <%= "完了".equals(status) ? "active" : "" %>">完了</span>
 </div>
+=======
+  <div class="steps">
+    <% for (int i = 0; i < list.length; i++) { %>
+      <% if (i > 0) { %><span class="arrow">▶</span><% } %>
+      <button type="button" disabled class="<%= list[i].equals(status) ? "active" : "" %>"><%= list[i] %></button>
+    <% } %>
+  </div>
+>>>>>>> branch 'master' of https://github.com/ewfasc/dadafda.git
 
   <div class="content">
     <div class="label">依頼内容</div>
