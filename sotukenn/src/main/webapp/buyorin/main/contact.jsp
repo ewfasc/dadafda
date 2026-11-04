@@ -72,8 +72,8 @@
   <form>
     <textarea name="content"></textarea>
     <div class="buttons">
-      <a href="戻る先">戻る</a>
-      <a href="$[link ]">送信</a>
+      <a href="javascript:history.back();">戻る</a>
+      <a href="ContactExecute.action">送信</a>
     </div>
    </form>
 </body>
