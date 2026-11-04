@@ -150,25 +150,22 @@
        
         <a onclick="confirmLogout()">ログアウト</a>
        
-        <a href="<%= request.getContextPath() %>/buyorin/main/AccountEdit.action">アカウント編集</a>
+        <a href="AccountEdit.action">アカウント編集</a>
         
-        <a href="<%= request.getContextPath() %>/buyorin/main/Contact.action">お問い合わせ</a>
+        <a href="Contact.action">お問い合わせ</a>
     </div>
 
     <h1>利用者トップ画面</h1>
     <div class="menu">
-<<<<<<< HEAD
         <a href="Order.action">依頼する</a>
         <a href="Status.action">依頼状況を確認する</a>
         <a href="History.action">履歴を確認する</a>
-=======
 
-        <a href="<%= request.getContextPath() %>/buyorin/main/Order.action">依頼する</a>
+        <a href="Order.action">依頼する</a>
        
-        <a href="<%= request.getContextPath() %>/buyorin/main/Status.action">依頼状況を確認する</a>
+        <a href="Status.action">依頼状況を確認する</a>
      
-        <a href="<%= request.getContextPath() %>/buyorin/main/History.action">履歴を確認する</a>
->>>>>>> branch 'master' of https://github.com/ewfasc/dadafda.git
+        <a href="History.action">履歴を確認する</a>
     </div>
 </body>
 </html>
