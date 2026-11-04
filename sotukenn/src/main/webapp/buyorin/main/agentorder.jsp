@@ -92,7 +92,7 @@
 
   <div class="list">
     <details>
-      <summary>注文ID：</summary>
+      <summary>注文ID：1</summary>
       <div class="detail">
         <div class="content"></div>
         <form action="" method="post">
@@ -103,7 +103,7 @@
     </details>
 
     <details>
-      <summary>注文ID：</summary>
+      <summary>注文ID：2</summary>
       <div class="detail">
         <div class="content"></div>
         <form action="送信先" method="post">
@@ -114,7 +114,7 @@
     </details>
 
     <details>
-      <summary>注文ID：</summary>
+      <summary>注文ID：3</summary>
       <div class="detail">
         <div class="content"></div>
         <form action="送信先" method="post">
