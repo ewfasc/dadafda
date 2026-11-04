@@ -75,27 +75,27 @@
   <form action="UserConfirmation.action" method="post">
     <div class="field">
       <label for="name">名前</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" value="${user.username}" required>
     </div>
     <div class="field">
       <label for="tel">電話番号</label>
-      <input type="tel" id="tell" name="tell" required>
+      <input type="tel" id="tell" name="tell" value="${user.tell}" required>
     </div>
     <div class="field">
       <label for="email">メールアドレス</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" value="${user.mail}" required>
     </div>
     <div class="field">
       <label for="password">パスワード</label>
-      <input type="password" id="password" name="password" required>
+      <input type="password" id="password" name="password" value="${user.password}" required>
     </div>
         <div class="field">
       <label for="address">住所</label>
-      <input type="text" id="address" name="address" required>
+      <input type="text" id="address" name="address" value="${menber.address}" required>
     </div>
     <div class="field">
       <label for="bank">支払方法</label>
-      <input type="text" id="pay" name="pay" required>
+      <input type="text" id="pay" name="pay" value="${menber.pay}" required>
     </div>
     <input type="submit" class="submit" value="登録">
   </form>

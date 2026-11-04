@@ -75,23 +75,23 @@
   <form action="AgentConfirmation.action" method="post">
     <div class="field">
       <label for="name">名前</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" value="${user.username}" required>
     </div>
     <div class="field">
       <label for="tell">電話番号</label>
-      <input type="tell" id="tell" name="tell" required>
+      <input type="tell" id="tell" name="tell" value="${user.tell}" required>
     </div>
     <div class="field">
       <label for="email">メールアドレス</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" value="${user.mail}" required>
     </div>
     <div class="field">
       <label for="password">パスワード</label>
-      <input type="password" id="password" name="password" required>
+      <input type="password" id="password" name="password" value="${user.password}" required>
     </div>
     <div class="field">
       <label for="bank">銀行口座</label>
-      <input type="text" id="bank" name="bank" required>
+      <input type="text" id="bank" name="bank" value="${agent.bank}" required>
     </div>
     <input type="submit" class="submit" value="登録">
    </form>
