@@ -7,6 +7,8 @@ import tool.Action;
 public class AgentOrderStatusAction extends Action {
 	//代行者依頼情報を表示するするアクション
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception{
+		String money="";
+		req.setAttribute("money", money);
 		req.getRequestDispatcher("agentorderstatus.jsp").forward(req, res);
 	}
 }

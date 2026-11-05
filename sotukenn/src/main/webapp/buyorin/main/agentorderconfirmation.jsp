@@ -86,7 +86,7 @@
 <script>
   function confirmCancel() {
     if (confirm("キャンセルして一覧に戻りますか？")) {
-      location.href = "OrderList.action";
+      location.href = "AgentOrder.action";
     }
   }
 </script>
