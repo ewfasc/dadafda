@@ -65,8 +65,7 @@
 
 <form action="next.jsp" method="post">
   <div class="box">
-    <label><input type="radio" name="status" value="0">配達不可</label>
-    <label><input type="radio" name="status" value="1">配達可能</label>
+    <label><input type="radio" name="status" value="1">買い物中</label>
     <label><input type="radio" name="status" value="2" checked>配達中</label>
     <label><input type="radio" name="status" value="3">配達完了</label>
   </div>
