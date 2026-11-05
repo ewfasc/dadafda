@@ -5,7 +5,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import tool.Action;
 
-public class AgentOrderComfirmationAction extends Action {
+public class AgentOrderConfirmationAction extends Action {
 	//アクション
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception{
@@ -13,7 +13,7 @@ public class AgentOrderComfirmationAction extends Action {
 		String orderid = req.getParameter("orderid");
 		session.setAttribute("orderid", orderid);
 		req.setAttribute("orderid", orderid);
-		req.getRequestDispatcher("agentordercomfirmation.action").forward(req, res);
+		req.getRequestDispatcher("agentorderconfirmation.jsp").forward(req, res);
 		
 	}
 }

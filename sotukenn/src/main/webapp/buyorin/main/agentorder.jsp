@@ -95,7 +95,7 @@
       <summary>注文ID：1</summary>
       <div class="detail">
         <div class="content"></div>
-        <form action="" method="post">
+        <form action="AgentOrderConfirmation.action" method="post">
           <input type="hidden" name="orderid" value="1">
           <button type="submit" class="accept">依頼を受ける</button>
         </form>
@@ -106,7 +106,7 @@
       <summary>注文ID：2</summary>
       <div class="detail">
         <div class="content"></div>
-        <form action="送信先" method="post">
+        <form action="AgentOrderConfirmation.action" method="post">
           <input type="hidden" name="orderid" value="2">
           <button type="submit" class="accept">依頼を受ける</button>
         </form>
@@ -117,7 +117,7 @@
       <summary>注文ID：3</summary>
       <div class="detail">
         <div class="content"></div>
-        <form action="送信先" method="post">
+        <form action="AgentOrderConfirmation.action" method="post">
           <input type="hidden" name="orderid" value="3">
           <button type="submit" class="accept">依頼を受ける</button>
         </form>
