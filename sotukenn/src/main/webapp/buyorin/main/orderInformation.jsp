@@ -72,7 +72,7 @@
 
   <div class="buttons">
     <button type="button" onclick="history.back()">戻る</button>
-    <button type="submit">次へ</button>
+     <button type="button" onclick="location.href='orderInformation2.jsp'">次へ</button>
   </div>
 </form>
 
