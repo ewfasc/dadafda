@@ -34,8 +34,7 @@ public class AgentConfirmationAction extends Action {
 		session.setAttribute("user", user);
 		session.setAttribute("agent", agent);
 		
-		req.setAttribute("link", "AgentConfirmation.action");
-		req.getRequestDispatcher("agentConfirmation.jsp").forward(req, res);
+		res.sendRedirect("AgentConfirmationDisplay.action");
 	}
 }
 

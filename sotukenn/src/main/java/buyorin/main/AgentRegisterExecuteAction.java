@@ -12,8 +12,21 @@ public class AgentRegisterExecuteAction extends Action {
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception{
 		
 		HttpSession session = req.getSession();
-		User user = (User)session.getAttribute("user");
-		Agent agent = (Agent)session.getAttribute("agent");
+		
+		if (session == null) {
+			res.sendRedirect("AgentRegister.action");
+			return;
+		}
+		
+		synchronized (session) {
+			User user = (User)session.getAttribute("user");
+			Agent agent = (Agent)session.getAttribute("agent");
+			
+			if (user == null || agent == null) {
+				res.sendRedirect("AgentRegister.action");
+				return;
+			}
+		}
 		
 		session.removeAttribute("user");
 		session.removeAttribute("agent");

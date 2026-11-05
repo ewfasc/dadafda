@@ -60,7 +60,7 @@
   <p class="message">登録完了しました</p>
 
   <div class="buttons">
-    <a href="戻る先">戻る</a>
+    <a href="/sotukenn/buyorin/Login.action">戻る</a>
   </div>
 </body>
 </html>

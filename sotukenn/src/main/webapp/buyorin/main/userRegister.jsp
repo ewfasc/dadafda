@@ -99,5 +99,6 @@
     </div>
     <input type="submit" class="submit" value="登録">
   </form>
+  	<a href="/sotukenn/buyorin/Login.action">ログイン画面へ</a>
  </body>
 </html>

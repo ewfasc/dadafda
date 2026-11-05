@@ -104,9 +104,24 @@
     </tr>
    </table>
 
-  <form action="AgentRegisterExecute.action" method="post">
-  	<input type="submit" formaction="AgentRegister.action" value="戻る">
-  	<input type="submit" value="完了">
+ <div class="buttons">
+ <a href="AgentRegister.action" class="done">戻る</a>
+ <form action="AgentRegisterExecute.action" method="post">
+  	<input type="submit" value="完了" class="done">
   </form>
+ </div>
 </body>
+<script>
+window.addEventListener("pageshow", function(event) {
+
+    const navigation =
+        performance.getEntriesByType("navigation")[0];
+
+    if (event.persisted ||
+        (navigation && navigation.type === "back_forward")) {
+
+        window.location.reload();
+    }
+});
+</script>
 </html>
