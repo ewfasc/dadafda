@@ -164,11 +164,11 @@
       <button type="button" class="close-btn" onclick="toggleSidebar()">×</button>
     </div>
     
-    <a href="main/userRegister.jsp">新規登録</a>
+    <a href="main/UserRegister.action">新規登録</a>
   </div>
 
   <form action="LoginExecute.action" method="post">
-    <a class="agent-btn" href="agentlogin.jsp">代行者ログイン</a>
+    <a class="agent-btn" href="AgentLogin.action">代行者ログイン</a>
     <h1>おつかりん利用者ログイン</h1>
     <p>ログイン</p>
     <label for="id">ID</label>
