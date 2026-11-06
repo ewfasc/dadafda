@@ -18,6 +18,8 @@ public class UserConfirmationAction extends Action {
 		String pay = req.getParameter("pay");
 		String address = req.getParameter("address");
 		
+		String maskedpass = "●".repeat(password.length());
+		
 		String id = "1234";
 		
 		User user = new User();
@@ -33,9 +35,9 @@ public class UserConfirmationAction extends Action {
 		menber.setAddress(address);
 		
 		HttpSession session = req.getSession();
-		
 		session.setAttribute("user", user);
 		session.setAttribute("menber", menber);
+		session.setAttribute("maskedpass", maskedpass);
 		
 		res.sendRedirect("UserConfirmationDisplay.action");
 	}

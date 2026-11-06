@@ -17,6 +17,8 @@ public class AgentConfirmationAction extends Action {
 		String mail = req.getParameter("email");
 		String bank = req.getParameter("bank");
 		
+		String maskedpass = "●".repeat(password.length());
+		
 		String id = "1234";
 		
 		User user = new User();
@@ -33,6 +35,8 @@ public class AgentConfirmationAction extends Action {
 		HttpSession session = req.getSession();
 		session.setAttribute("user", user);
 		session.setAttribute("agent", agent);
+		
+		session.setAttribute("maskedpass", maskedpass);
 		
 		res.sendRedirect("AgentConfirmationDisplay.action");
 	}

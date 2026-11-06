@@ -84,23 +84,23 @@
   <table>
     <tr>
       <th>名前</th>
-      <td>${sessionScope.user.username}</td>
+      <td>${user.username}</td>
     </tr>
     <tr>
       <th>電話番号</th>
-      <td>${sessionScope.user.tell}</td>
+      <td>${user.tell}</td>
     </tr>
     <tr>
       <th>メールアドレス</th>
-      <td>${sessionScope.user.mail}</td>
+      <td>${user.mail}</td>
     </tr>
     <tr>
       <th>パスワード</th>
-      <td>${sessionScope.user.password}</td>
+      <td>${maskedpass}</td>
     </tr>
     <tr>
       <th>銀行口座</th>
-      <td>${sessionScope.agent.bank}</td>
+      <td>${agent.bank}</td>
     </tr>
    </table>
 
