@@ -180,7 +180,7 @@
     </label>
 
     <div class="complete">
-      <button type="submit" name="complete" value="1" formaction="orderInformation.jsp">完了</button>
+      <button type="submit" name="complete" value="1" id="completeBtn" formaction="orderInformation.jsp">完了</button>
     </div>
   </div>
 
@@ -209,6 +209,16 @@
 
   amount.addEventListener('input', updateDone);
   updateDone();
+
+  // 「配達完了」を選んで完了を押したときだけ確認画面へ送る
+  document.getElementById('completeBtn').addEventListener('click', function () {
+    var done = document.querySelector('input[name="status"][value="3"]');
+    if (done.checked) {
+      this.formAction = 'oderInformationCompleted..jsp';
+    } else {
+      this.formAction = 'orderInformation.jsp';
+    }
+  });
 </script>
 
 </body>
