@@ -4,9 +4,14 @@
   request.setCharacterEncoding("UTF-8");
   String message = "";
 
+  String dbUrl  = "jdbc:mysql://localhost:3306/データベース名?useUnicode=true&characterEncoding=UTF-8";
+  String dbUser = "ユーザー名";
+  String dbPass = "パスワード";
+
   String requestId = request.getParameter("requestId") != null ? request.getParameter("requestId") : "000000";
   String totalAmountParam = request.getParameter("totalAmount") != null ? request.getParameter("totalAmount") : "";
 
+  // ステータス更新
   if (request.getParameter("complete") != null) {
     String status = request.getParameter("status");
 
@@ -17,17 +22,13 @@
       hasAmount = false;
     }
 
-    if ("3".equals(status) && !hasAmount) {
-      message = "合計金額を入力してください。";
-    } else {
-      String url  = "jdbc:mysql://localhost:3306/データベース名?useUnicode=true&characterEncoding=UTF-8";
-      String user = "ユーザー名";
-      String pass = "パスワード";
-      String sql = "UPDATE orders SET status = ?, total_amount = ? WHERE request_id = ?";
+    message = "更新に失敗しました。";
 
+    if (status != null && !("3".equals(status) && !hasAmount)) {
+      String sql = "UPDATE orders SET status = ?, total_amount = ? WHERE request_id = ?";
       try {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        try (Connection con = DriverManager.getConnection(url, user, pass);
+        try (Connection con = DriverManager.getConnection(dbUrl, dbUser, dbPass);
              PreparedStatement ps = con.prepareStatement(sql)) {
           ps.setInt(1, Integer.parseInt(status));
           if (hasAmount) {
@@ -37,12 +38,31 @@
           }
           ps.setString(3, requestId);
           int count = ps.executeUpdate();
-          message = (count > 0) ? "更新しました。" : "該当する依頼が見つかりません。";
+          if (count > 0) {
+            message = "更新しました。";
+          }
         }
       } catch (Exception e) {
-        message = "更新に失敗しました：" + e.getMessage();
+        message = "更新に失敗しました。";
       }
     }
+  }
+
+  // 現在のステータスを取得（更新後の値を反映するため、更新処理のあとに読む）
+  int currentStatus = 0;
+  try {
+    Class.forName("com.mysql.cj.jdbc.Driver");
+    try (Connection con = DriverManager.getConnection(dbUrl, dbUser, dbPass);
+         PreparedStatement ps = con.prepareStatement("SELECT status FROM orders WHERE request_id = ?")) {
+      ps.setString(1, requestId);
+      try (ResultSet rs = ps.executeQuery()) {
+        if (rs.next()) {
+          currentStatus = rs.getInt("status");
+        }
+      }
+    }
+  } catch (Exception e) {
+    // 取得できなければ制限なしで表示
   }
 %>
 <!DOCTYPE html>
@@ -149,9 +169,15 @@
       <input type="number" id="totalAmount" name="totalAmount" min="1" value="<%= totalAmountParam %>">円
     </div>
 
-    <label><input type="radio" name="status" value="1" checked>買い物中</label>
-    <label><input type="radio" name="status" value="2">配達中</label>
-    <label id="doneLabel" class="disabled"><input type="radio" name="status" value="3" id="doneRadio" disabled>配達完了</label>
+    <label<%= currentStatus == 1 ? " class=\"disabled\"" : "" %>>
+      <input type="radio" name="status" value="1" <%= currentStatus == 1 ? "disabled" : "checked" %>>買い物中
+    </label>
+    <label<%= currentStatus == 2 ? " class=\"disabled\"" : "" %>>
+      <input type="radio" name="status" value="2" <%= currentStatus == 2 ? "disabled" : (currentStatus == 1 ? "checked" : "") %>>配達中
+    </label>
+    <label id="doneLabel" class="disabled">
+      <input type="radio" name="status" value="3" id="doneRadio" disabled>配達完了
+    </label>
 
     <div class="complete">
       <button type="submit" name="complete" value="1" formaction="orderInformation.jsp">完了</button>
@@ -165,16 +191,19 @@
 </form>
 
 <script>
+  var currentStatus = <%= currentStatus %>;
   var amount = document.getElementById('totalAmount');
   var doneRadio = document.getElementById('doneRadio');
   var doneLabel = document.getElementById('doneLabel');
 
   function updateDone() {
     var hasAmount = amount.value !== '' && Number(amount.value) > 0;
-    doneRadio.disabled = !hasAmount;
-    doneLabel.classList.toggle('disabled', !hasAmount);
-    if (!hasAmount && doneRadio.checked) {
-      document.querySelector('input[name="status"][value="1"]').checked = true;
+    var canDone = hasAmount && currentStatus !== 3;
+    doneRadio.disabled = !canDone;
+    doneLabel.classList.toggle('disabled', !canDone);
+    if (!canDone && doneRadio.checked) {
+      var first = document.querySelector('input[name="status"]:not(:disabled)');
+      if (first) first.checked = true;
     }
   }
 
