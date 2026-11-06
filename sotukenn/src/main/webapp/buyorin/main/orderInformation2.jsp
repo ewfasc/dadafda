@@ -96,7 +96,7 @@
 
   <div class="buttons">
     <button type="button" onclick="history.back()">戻る</button>
-    <button type="button" onclick="location.href='next.jsp'">次へ</button>
+    <button type="button" onclick="リンク先記入'">メインメニューに戻る</button>
   </div>
 </div>
 </body>
