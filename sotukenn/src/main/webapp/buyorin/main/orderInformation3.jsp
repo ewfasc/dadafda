@@ -80,6 +80,7 @@
 </head>
 <body>
 
+
 <header>
   <div class="logo">買い物代行<br>お使い便</div>
   <h1>受注依頼情報</h1>

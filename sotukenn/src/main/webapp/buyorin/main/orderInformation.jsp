@@ -70,6 +70,7 @@
     <label><input type="radio" name="status" value="3">配達完了</label>
   </div>
 
+
   <div class="buttons">
     <button type="button" onclick="history.back()">戻る</button>
      <button type="button" onclick="location.href='orderInformation2.jsp'">次へ</button>
