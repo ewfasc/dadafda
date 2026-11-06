@@ -111,7 +111,7 @@
     <p><%= success ? "配達を完了しました。" : "更新に失敗しました。" %></p>
   </div>
   <div class="buttons">
-    <button type="button" onclick="location.href='MainMenu.jsp'">メインメニューに戻る</button>
+    <button type="button" onclick="location.href='agenttop.jsp'">メインメニューに戻る</button>
   </div>
 
 <% } %>
