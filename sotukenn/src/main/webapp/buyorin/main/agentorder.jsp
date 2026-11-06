@@ -88,41 +88,22 @@
     <div class="logo">買い物代行<br>お使い便</div>
   </header>
 
+
   <h1>依頼一覧</h1>
 
   <div class="list">
+    <% for (int i = 1; i <= 5; i++) { %>
     <details>
-      <summary>注文ID：1</summary>
+      <summary>注文ID：<%= i %></summary>
       <div class="detail">
         <div class="content"></div>
         <form action="AgentOrderConfirmation.action" method="post">
-          <input type="hidden" name="orderid" value="1">
+          <input type="hidden" name="orderid" value="<%= i %>">
           <button type="submit" class="accept">依頼を受ける</button>
         </form>
       </div>
     </details>
-
-    <details>
-      <summary>注文ID：2</summary>
-      <div class="detail">
-        <div class="content"></div>
-        <form action="AgentOrderConfirmation.action" method="post">
-          <input type="hidden" name="orderid" value="2">
-          <button type="submit" class="accept">依頼を受ける</button>
-        </form>
-      </div>
-    </details>
-
-    <details>
-      <summary>注文ID：3</summary>
-      <div class="detail">
-        <div class="content"></div>
-        <form action="AgentOrderConfirmation.action" method="post">
-          <input type="hidden" name="orderid" value="3">
-          <button type="submit" class="accept">依頼を受ける</button>
-        </form>
-      </div>
-    </details>
+    <% } %>
   </div>
 
   <div class="buttons">

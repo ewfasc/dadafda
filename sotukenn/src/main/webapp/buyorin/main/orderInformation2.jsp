@@ -68,14 +68,16 @@
     gap: 40px;
     margin: 25px 0 20px;
   }
-  .buttons button {
-    width: 120px;
-    height: 40px;
-    font-size: 16px;
-    border: 1px solid #000;
-    background: #fff;
-    cursor: pointer;
-  }
+ .buttons button {
+  min-width: 120px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 16px;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+}
 </style>
 </head>
 <body>
@@ -88,6 +90,7 @@
 
   <div class="budget">予算金額</div>
 
+
   <div class="items">
     <ul>
     </ul>
@@ -95,7 +98,7 @@
 
   <div class="buttons">
     <button type="button" onclick="history.back()">戻る</button>
-    <button type="button" onclick="location.href='next.jsp'">次へ</button>
+    <button type="button" onclick="location.href='MainMenu.jsp'">メインメニューに戻る</button>
   </div>
 </div>
 </body>
