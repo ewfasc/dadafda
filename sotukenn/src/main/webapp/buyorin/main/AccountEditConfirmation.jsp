@@ -1,0 +1,138 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>アカウント編集確認</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Meiryo", sans-serif;
+    color: #333;
+    background: #fff;
+  }
+  header {
+    position: relative;
+    padding: 16px 24px;
+    text-align: center;
+  }
+  .logo {
+    position: absolute;
+    left: 24px;
+    top: 16px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  h1 { margin: 0; font-size: 32px; font-weight: normal; }
+
+  .card {
+    max-width: 640px;
+    margin: 32px auto;
+    padding: 32px 48px;
+    border: 1px solid #333;
+    border-radius: 48px;
+  }
+  .row { margin-bottom: 20px; }
+  .row label { display: block; font-size: 12px; margin-bottom: 6px; }
+  .row .value {
+    padding: 8px 10px;
+    border: 1px solid #666;
+    min-height: 36px;
+    background: #fff;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 32px;
+  }
+  .buttons button {
+    width: 108px;
+    height: 44px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+  }
+  .btn-back   { background: #dae8fc; border: 1px solid #6c8ebf; }
+  .btn-change { background: #fff2cc; border: 1px solid #d6b656; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">買い物代行<br>お使い便</div>
+  <h1>アカウント編集確認</h1>
+</header>
+
+<form class="card" action="AccountEditServlet" method="post">
+
+  <%-- 変更した項目（値が入っているもの）だけ表示 --%>
+  <c:if test="${not empty id}">
+    <div class="row">
+      <label>ID</label>
+      <div class="value"><c:out value="${id}" /></div>
+      <input type="hidden" name="id" value="<c:out value='${id}' />">
+    </div>
+  </c:if>
+
+  <c:if test="${not empty userName}">
+    <div class="row">
+      <label>ユーザ名</label>
+      <div class="value"><c:out value="${userName}" /></div>
+      <input type="hidden" name="userName" value="<c:out value='${userName}' />">
+    </div>
+  </c:if>
+
+  <c:if test="${not empty email}">
+    <div class="row">
+      <label>メールアドレス</label>
+      <div class="value"><c:out value="${email}" /></div>
+      <input type="hidden" name="email" value="<c:out value='${email}' />">
+    </div>
+  </c:if>
+
+  <c:if test="${not empty password}">
+    <div class="row">
+      <label>パスワード</label>
+      <div class="value">********</div>
+      <input type="hidden" name="password" value="<c:out value='${password}' />">
+    </div>
+  </c:if>
+
+  <c:if test="${not empty address}">
+    <div class="row">
+      <label>住所</label>
+      <div class="value"><c:out value="${address}" /></div>
+      <input type="hidden" name="address" value="<c:out value='${address}' />">
+    </div>
+  </c:if>
+
+  <c:if test="${not empty tel}">
+    <div class="row">
+      <label>電話番号</label>
+      <div class="value"><c:out value="${tel}" /></div>
+      <input type="hidden" name="tel" value="<c:out value='${tel}' />">
+    </div>
+  </c:if>
+
+  <c:if test="${not empty payment}">
+    <div class="row">
+      <label>支払い方法追加</label>
+      <div class="value"><c:out value="${payment}" /></div>
+      <input type="hidden" name="payment" value="<c:out value='${payment}' />">
+    </div>
+  </c:if>
+
+  <div class="buttons">
+    <button type="button" class="btn-back" onclick="history.back()">戻る</button>
+    <button type="submit" class="btn-change">変更</button>
+  </div>
+
+</form>
+
+</body>
+</html>
