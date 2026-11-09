@@ -99,7 +99,7 @@
 
     <div class="content">${param.content}</div>
 
-    <form action="AcceptOrder.action" method="post">
+    <form action="AgentOrderStatus.action" method="post">
         <input type="hidden" name="orderId" value="${param.orderId}">
         <div class="buttons">
             <button type="button" class="cancel-btn" onclick="confirmCancel()">キャンセル</button>

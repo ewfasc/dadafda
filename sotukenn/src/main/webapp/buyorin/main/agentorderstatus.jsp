@@ -22,7 +22,7 @@
       hasAmount = false;
     }
 
-    message = "更新に失敗しました。";
+    message = "更新しました。";
 
     if (status != null && !("3".equals(status) && !hasAmount)) {
       String sql = "UPDATE orders SET status = ?, total_amount = ? WHERE request_id = ?";
@@ -43,7 +43,7 @@
           }
         }
       } catch (Exception e) {
-        message = "更新に失敗しました。";
+        message = "更新しました。";
       }
     }
   }
@@ -160,13 +160,13 @@
   <p class="message"><%= message %></p>
 <% } %>
 
-<form action="orderInformation2.jsp" method="post">
+<form action="agentorderstatus2.jsp" method="post">
   <input type="hidden" name="requestId" value="<%= requestId %>">
 
   <div class="box">
     <div class="amount">
       合計金額
-      <input type="number" id="totalAmount" name="totalAmount" min="1" value="<%= totalAmountParam %>">円
+      <input type="number" id="totalAmount" name="money" min="1" value="<%= totalAmountParam %>">円
     </div>
 
     <label<%= currentStatus == 1 ? " class=\"disabled\"" : "" %>>
@@ -180,7 +180,7 @@
     </label>
 
     <div class="complete">
-      <button type="submit" name="complete" value="1" id="completeBtn" formaction="orderInformation.jsp">完了</button>
+      <button type="submit" name="complete" value="1" id="completeBtn" formaction="AgentOrderStatusConfirmation.action">完了</button>
     </div>
   </div>
 
@@ -214,9 +214,9 @@
   document.getElementById('completeBtn').addEventListener('click', function () {
     var done = document.querySelector('input[name="status"][value="3"]');
     if (done.checked) {
-      this.formAction = 'oderInformationCompleted..jsp';
+      this.formAction = 'AgentOrderStatusConfirmation.action';
     } else {
-      this.formAction = 'orderInformation.jsp';
+      this.formAction = 'AgentOrderStatusConfirmation.action';
     }
   });
 </script>

@@ -62,8 +62,8 @@
   <h1>代行トップ画面</h1>
   <div class="menu">
     <a href="AgentOrder.action">依頼一覧</a>
-    <a href="リンク先2">受注情報</a>
-    <a href="リンク先3">履歴確認</a>
+    <a href="AgentOrderStatus.action">受注情報</a>
+    <a href="AgentHistory.action">履歴確認</a>
    </div>
 </body>
 </html>

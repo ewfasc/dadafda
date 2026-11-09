@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.sql.*" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%
   request.setCharacterEncoding("UTF-8");
 
@@ -92,7 +93,7 @@
 
   <h1>完了確認</h1>
   <div class="box">
-    <p>合計金額：<%= totalAmount %>円</p>
+    <p>合計金額：${money }円</p>
     <p>配達を完了にしますか？</p>
   </div>
   <form method="post">
