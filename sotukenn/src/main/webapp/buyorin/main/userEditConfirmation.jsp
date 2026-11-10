@@ -68,7 +68,7 @@
   <h1>アカウント編集確認</h1>
 </header>
 
-<form class="card" action="AccountEditServlet" method="post">
+<form class="card" action="UserEditExecute.action" method="post">
 
   <%-- 変更した項目（値が入っているもの）だけ表示 --%>
   <c:if test="${not empty name}">
