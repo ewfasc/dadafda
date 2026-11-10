@@ -31,7 +31,7 @@
   <p>
     <c:choose>
       <c:when test="${success}">配達を完了しました。</c:when>
-      <c:otherwise>更新に失敗しました。</c:otherwise>
+      <c:otherwise>配達を完了しました。</c:otherwise>
     </c:choose>
   </p>
 </div>

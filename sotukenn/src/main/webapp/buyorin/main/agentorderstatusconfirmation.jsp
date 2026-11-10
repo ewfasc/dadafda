@@ -32,7 +32,7 @@
   <p>配達を完了にしますか？</p>
 </div>
 
-<form action="AgentOrderStatusComplete.action" method="post">
+<form action="AgentOrderStatusExecute.action" method="post">
   <input type="hidden" name="requestId" value="<c:out value='${param.requestId}' />">
   <input type="hidden" name="totalAmount" value="<c:out value='${money}' />">
   <div class="buttons">

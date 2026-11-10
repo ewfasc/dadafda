@@ -11,21 +11,20 @@ public class AgentOrderStatusConfirmationAction extends Action {
 	//代行者依頼金額を保存するアクション
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception{
 		HttpSession session = req.getSession();
+		OrderdetailDAO dao = new OrderdetailDAO();
 		String orderid = (String) session.getAttribute("orderid");
-		Integer status = Integer.parseInt(req.getParameter("status"));
+		Integer status = Integer.parseInt(req.getParameter("status"));	
 		if(status.equals(3)) {
 			Integer money = Integer.parseInt(req.getParameter("money"));
-			OrderdetailDAO dao = new OrderdetailDAO();
 			dao.ordermoney(orderid,status,money);
 			session.setAttribute("status",status);
 			session.setAttribute("money",money );
 			req.setAttribute("status",status);
 			req.setAttribute("money", money);
 			req.getRequestDispatcher("agentorderstatusconfirmation.jsp").forward(req, res);
-		}
-		OrderdetailDAO dao = new OrderdetailDAO();
+		}else
 		dao.status(orderid, status);
 		req.getRequestDispatcher("agentorderstatus.jsp").forward(req, res);
+		}
 	}
-}
 
