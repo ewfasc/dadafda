@@ -185,7 +185,7 @@
   </div>
 
   <div class="buttons">
-    <button type="button" onclick="history.back()">戻る</button>
+    <button type="button" onclick="Top.action">戻る</button>
     <button type="submit">次へ</button>
   </div>
 </form>
