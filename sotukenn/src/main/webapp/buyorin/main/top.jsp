@@ -151,7 +151,7 @@
        
         <a onclick="confirmLogout()">ログアウト</a>
        
-        <a href="UserAccount.action">アカウント編集</a>
+        <a href="UserEdit.action">アカウント編集</a>
         
         <a href="Contact.action">お問い合わせ</a>
     </div>

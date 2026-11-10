@@ -15,9 +15,9 @@
 		<div>
 			<details>
 				<summary>アカウント名</summary>
-				<form action="" method="post">
+				<form action="UserEditConfirmation.action" method="post">
 					<div class="filed">
-						<input type="hidden" name="type" vlaue="name">
+						<input type="hidden" name="type" value="name">
 						<input type="text" id="name" name="value" value="${user.username}" required>
 					</div>
 					<div>
@@ -28,9 +28,9 @@
 			
 			<details>
 				<summary>電話番号</summary>
-				<form action="" method="post">
+				<form action="UserEditConfirmation.action" method="post">
 					<div class="filed">
-						<input type="hidden" name="type" vlaue="tell">
+						<input type="hidden" name="type" value="tell">
 						<input type="tel" id="tell" name="value" value="${user.tell}" required>
 					</div>
 					<div>
@@ -41,9 +41,9 @@
 			
 			<details>
 				<summary>メールアドレス</summary>
-				<form action="" method="post">
+				<form action="UserEditConfirmation.action" method="post">
 					<div class="filed">
-						<input type="hidden" name="type" vlaue="mail">
+						<input type="hidden" name="type" value="mail">
 						<input type="email" id="mail" name="value" value="${user.mail}" required>
 					</div>
 					<div>
@@ -54,12 +54,9 @@
 			
 			<details>
 				<summary>パスワード</summary>
-				<form action="" method="post">
+				<form action="UserEditConfirmation.action" method="post">
 					<div class="filed">
-						<input type="hidden" name="type" vlaue="password">
-						<input type="password" id="password"  name="value" value="${user.password}" required>
-					</div>
-					<div class="filed">
+						<input type="hidden" name="type" value="password">
 						<input type="password" id="password"  name="value" value="${user.password}" required>
 					</div>
 					<div>
@@ -70,9 +67,9 @@
 			
 			<details>
 				<summary>住所</summary>
-				<form action="" method="post">
+				<form action="UserEditConfirmation.action" method="post">
 					<div class="filed">
-						<input type="hidden" name="type" vlaue="address">
+						<input type="hidden" name="type" value="address">
 						<input type="text" id="address" name="value" value="${member.address}" required>
 					</div>
 					<div>

@@ -71,27 +71,19 @@
 <form class="card" action="AccountEditServlet" method="post">
 
   <%-- 変更した項目（値が入っているもの）だけ表示 --%>
-  <c:if test="${not empty id}">
-    <div class="row">
-      <label>ID</label>
-      <div class="value"><c:out value="${id}" /></div>
-      <input type="hidden" name="id" value="<c:out value='${id}' />">
-    </div>
-  </c:if>
-
-  <c:if test="${not empty userName}">
+  <c:if test="${not empty name}">
     <div class="row">
       <label>ユーザ名</label>
-      <div class="value"><c:out value="${userName}" /></div>
-      <input type="hidden" name="userName" value="<c:out value='${userName}' />">
+      <div class="value"><c:out value="${name}" /></div>
+      <input type="hidden" name="userName" value="<c:out value='${name}' />">
     </div>
   </c:if>
 
-  <c:if test="${not empty email}">
+  <c:if test="${not empty mail}">
     <div class="row">
       <label>メールアドレス</label>
-      <div class="value"><c:out value="${email}" /></div>
-      <input type="hidden" name="email" value="<c:out value='${email}' />">
+      <div class="value"><c:out value="${mail}" /></div>
+      <input type="hidden" name="email" value="<c:out value='${mail}' />">
     </div>
   </c:if>
 
@@ -111,21 +103,14 @@
     </div>
   </c:if>
 
-  <c:if test="${not empty tel}">
+  <c:if test="${not empty tell}">
     <div class="row">
       <label>電話番号</label>
-      <div class="value"><c:out value="${tel}" /></div>
-      <input type="hidden" name="tel" value="<c:out value='${tel}' />">
+      <div class="value"><c:out value="${tell}" /></div>
+      <input type="hidden" name="tell" value="<c:out value='${tell}' />">
     </div>
   </c:if>
 
-  <c:if test="${not empty payment}">
-    <div class="row">
-      <label>支払い方法追加</label>
-      <div class="value"><c:out value="${payment}" /></div>
-      <input type="hidden" name="payment" value="<c:out value='${payment}' />">
-    </div>
-  </c:if>
 
   <div class="buttons">
     <button type="button" class="btn-back" onclick="history.back()">戻る</button>
