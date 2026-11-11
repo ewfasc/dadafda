@@ -80,7 +80,7 @@
 			
 			<details>
 				<summary>支払方法</summary>
-				<a href="">支払方法変更画面へ</a>
+				<a href="UserEditPay.action">支払方法変更画面へ</a>
 			</details>
 		
 		</div>
