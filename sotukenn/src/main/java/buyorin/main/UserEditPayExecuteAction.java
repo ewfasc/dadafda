@@ -17,7 +17,7 @@ public class UserEditPayExecuteAction extends Action {
 			}
 		
 		synchronized (session) {
-			String pay= (String)session.getAttribute("pay");
+			String pay= (String)session.getAttribute("newpay");
 			System.out.println(pay);
 			
 			if (pay == null || pay == null) {
@@ -26,6 +26,7 @@ public class UserEditPayExecuteAction extends Action {
 			}
 			
 			session.removeAttribute("pay");
+			session.removeAttribute("newpay");
 		}
 		res.sendRedirect("UserEditPayCompletion.action");
 	}

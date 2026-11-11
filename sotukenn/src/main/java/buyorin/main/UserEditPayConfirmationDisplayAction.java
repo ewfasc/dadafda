@@ -10,12 +10,12 @@ public class UserEditPayConfirmationDisplayAction extends Action {
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception{
 		
 		res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
-		res.setHeader("Parama", "no-cache");
+		res.setHeader("Pragma", "no-cache");
 		res.setDateHeader("Expires", 0);
 		
 		HttpSession session = req.getSession(false);
 		
-		String pay = (String)session.getAttribute("pay");
+		String pay = (String)session.getAttribute("newpay");
 		System.out.println(pay);
 		
 		if (session == null || pay == null) {
@@ -23,10 +23,7 @@ public class UserEditPayConfirmationDisplayAction extends Action {
 			return;
 			}
 		
-		session.setAttribute("pay", pay);
-		System.out.println(pay);
-		
-		req.getRequestDispatcher("userEditConfirmation.jsp").forward(req, res);
+		req.getRequestDispatcher("userEditPayConfirmation.jsp").forward(req, res);
 	}
 }
 

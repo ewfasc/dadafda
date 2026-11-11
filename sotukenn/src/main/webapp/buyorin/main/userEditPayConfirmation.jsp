@@ -69,19 +69,16 @@
 </header>
 
 <form class="card" action="UserEditPayExecute.action" method="post">
-
-	<c:if test="${not empty mey}">
     <div class="row">
-      <label>カード情報</label>
-      <div class="value"><c:out value="${sessionScope.pay}" /></div>
-      <input type="hidden" name="pay" value="<c:out value='${sessionScope.pay}' />">
-    </div>
-
-  <div class="buttons">
+                <label>カード情報</label>
+                <div class="value">
+                    <c:out value="${sessionScope.newpay}" />
+                </div>
+            </div>
+  	<div class="buttons">
     <button type="button" class="btn-back" onclick="history.back()">戻る</button>
     <button type="submit" class="btn-change">変更</button>
   </div>
-  </c:if>
 
 </form>
 

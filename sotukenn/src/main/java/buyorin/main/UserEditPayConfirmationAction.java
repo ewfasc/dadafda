@@ -15,7 +15,7 @@ public class UserEditPayConfirmationAction extends Action {
 		
 		HttpSession session = req.getSession();
 		
-		session.setAttribute("pay", pay);
+		session.setAttribute("newpay", pay);
 		
 		res.sendRedirect("UserEditPayConfirmationDisplay.action");
 	}

@@ -10,7 +10,7 @@ public class AgentEditConfirmationDisplayAction extends Action {
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception{
 		
 		res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
-		res.setHeader("Parama", "no-cache");
+		res.setHeader("Pragma", "no-cache");
 		res.setDateHeader("Expires", 0);
 		
 		HttpSession session = req.getSession(false);
