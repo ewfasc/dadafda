@@ -11,4 +11,7 @@ public class UserDAO extends DAO {
 		User.setPassword(password);
 		return User;
 	}
+	public void delete(String id)
+			throws Exception {
+}
 }
