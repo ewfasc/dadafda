@@ -60,7 +60,7 @@
   <p class="message">編集完了しました</p>
 
   <div class="buttons">
-    <a href="AgentTop.action">戻る</a>
+    <a href="Agenttop.action">戻る</a>
   </div>
 </body>
 </html>

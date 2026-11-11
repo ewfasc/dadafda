@@ -149,7 +149,7 @@
 
     <a onclick="confirmLogout()">ログアウト</a>
 
-    <a href="AgentAccount.action">アカウント編集</a>
+    <a href="AgentEdit.action">アカウント編集</a>
 
     <a href="Contact.action">お問い合わせ</a>
   </div>
