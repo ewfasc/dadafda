@@ -1,6 +1,6 @@
 package bean;
 
-public class Menber implements java.io.Serializable {
+public class Member implements java.io.Serializable {
 	
 	private String id;
 	private String pay;

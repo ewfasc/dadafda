@@ -1,6 +1,6 @@
 package buyorin.main;
 
-import bean.Menber;
+import bean.Member;
 import bean.User;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -29,14 +29,14 @@ public class UserConfirmationAction extends Action {
 		user.setMail(mail);
 		user.setTell(tell);
 		
-		Menber menber = new Menber();
-		menber.setId(id);
-		menber.setPay(pay);
-		menber.setAddress(address);
+		Member member = new Member();
+		member.setId(id);
+		member.setPay(pay);
+		member.setAddress(address);
 		
 		HttpSession session = req.getSession();
 		session.setAttribute("user", user);
-		session.setAttribute("menber", menber);
+		session.setAttribute("member", member);
 		session.setAttribute("maskedpass", maskedpass);
 		
 		res.sendRedirect("UserConfirmationDisplay.action");

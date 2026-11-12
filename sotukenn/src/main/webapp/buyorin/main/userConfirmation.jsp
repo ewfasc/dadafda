@@ -100,11 +100,11 @@
     </tr>
        <tr>
       <th>住所</th>
-      <td>${menber.address}</td>
+      <td>${member.address}</td>
     </tr>
     <tr>
       <th>支払方法</th>
-      <td>${menber.pay}</td>
+      <td>${member.pay}</td>
     </tr>
    </table>
 

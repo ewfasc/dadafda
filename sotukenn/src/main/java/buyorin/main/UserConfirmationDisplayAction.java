@@ -17,7 +17,7 @@ public class UserConfirmationDisplayAction extends Action {
 		
 		if (session == null ||
 			session.getAttribute("user") == null ||
-			session.getAttribute("menber") == null) {
+			session.getAttribute("member") == null) {
 			res.sendRedirect("UserRegister.action");
 			return;
 			}

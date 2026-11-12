@@ -91,11 +91,11 @@
     </div>
         <div class="field">
       <label for="address">住所</label>
-      <input type="text" id="address" name="address" value="${menber.address}" required>
+      <input type="text" id="address" name="address" value="${member.address}" required>
     </div>
     <div class="field">
       <label for="bank">支払方法</label>
-      <input type="text" id="pay" name="pay" value="${menber.pay}" required>
+      <input type="text" id="pay" name="pay" value="${member.pay}" required>
     </div>
     <input type="submit" class="submit" value="登録">
   </form>

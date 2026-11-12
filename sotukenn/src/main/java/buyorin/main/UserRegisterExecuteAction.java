@@ -1,6 +1,6 @@
 package buyorin.main;
 
-import bean.Menber;
+import bean.Member;
 import bean.User;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -20,15 +20,15 @@ public class UserRegisterExecuteAction extends Action {
 		
 		synchronized (session) {
 			User user = (User)session.getAttribute("user");
-			Menber menber = (Menber)session.getAttribute("menber");
+			Member member = (Member)session.getAttribute("member");
 			
-			if (user == null || menber == null) {
+			if (user == null || member == null) {
 				res.sendRedirect("UserRegister.action");
 				return;
 			}
 			
 			session.removeAttribute("user");
-			session.removeAttribute("menber");
+			session.removeAttribute("member");
 		}
 		
 		res.sendRedirect("UserCompletion.action");
