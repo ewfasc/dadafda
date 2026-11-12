@@ -8,6 +8,6 @@ public class LogoutAction extends Action {
 	//ログアウトするアクション
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse res)throws Exception{
-		res.sendRedirect("../index.jsp");
+		res.sendRedirect("../Login.action");
 	}
 }
