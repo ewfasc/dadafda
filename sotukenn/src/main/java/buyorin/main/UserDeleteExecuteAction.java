@@ -15,7 +15,7 @@ public class UserDeleteExecuteAction extends Action {
 		try {
         	UserDAO dao = new UserDAO();
             dao.delete(id);
-            res.sendRedirect("DeleteCompletion.action");
+            res.sendRedirect("UserDeleteCompletion.action");
         } catch (Exception e) {
           
             e.printStackTrace();

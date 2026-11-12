@@ -70,6 +70,11 @@
 				<summary>銀行口座</summary>
 				<a href="">銀行口座変更画面へ</a>
 			</details>
+			
+			<details>
+				<summary>アカウント削除</summary>
+				<a href="AgentDelete.action">アカウント削除画面へ</a>
+			</details>
 		
 		</div>
 		<div class="buttons">

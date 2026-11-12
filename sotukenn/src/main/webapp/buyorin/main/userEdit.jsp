@@ -82,6 +82,11 @@
 				<summary>支払方法</summary>
 				<a href="UserEditPay.action">支払方法変更画面へ</a>
 			</details>
+			
+			<details>
+				<summary>アカウント削除</summary>
+				<a href="UserDelete.action">アカウント削除画面へ</a>
+			</details>
 		
 		</div>
 		<div class="buttons">
