@@ -68,7 +68,7 @@
 			
 			<details>
 				<summary>銀行口座</summary>
-				<a href="">銀行口座変更画面へ</a>
+				<a href="AgentEditBank.action">銀行口座変更画面へ</a>
 			</details>
 			
 			<details>

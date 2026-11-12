@@ -20,7 +20,7 @@ public class UserEditPayExecuteAction extends Action {
 			String pay= (String)session.getAttribute("newpay");
 			System.out.println(pay);
 			
-			if (pay == null || pay == null) {
+			if (session == null || pay == null) {
 				res.sendRedirect("UserEditPay.action");
 				return;
 			}
