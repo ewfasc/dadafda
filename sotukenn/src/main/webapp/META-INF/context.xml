@@ -1,0 +1,12 @@
+<Context>
+    <Resource name="jdbc/neondb"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://ep-royal-block-be05eaj8-pooler.c-9.us-east-2.aws.neon.tech/neondb?sslmode=require"
+              username="neondb_owner"
+              password="npg_OpM5VYGTfIe4"
+              maxTotal="20"
+              maxIdle="10"
+              maxWaitMillis="-1" />
+</Context>
